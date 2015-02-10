@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Mon Forum </title>
+		<!-- On ouvre la fenêtre à la largeur de l'écran -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Intégration du CSS Bootstrap -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+		<!--pour tablette et iphone Intégration du CSS responsive Bootstrap -->
+		<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+		<!--Feuille de style de la documentation Boostrap-->
+		<link href="doc.css" rel="stylesheet"></link>
+
+	</head>
+	<body>
+		<!-- Conteneur principal -->
+		<div class="container-fluid"><!--permet de centrer le contenu du sit-->
+			<!-- Barre de navigation -->
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<a class="brand" href="#Res">Mon Forum</a>
+					<!-- Structure du menu -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul class="nav">
+							<li class="active"><a href="#accueil">Accueil</a></li>
+							<li><a href="#news">Journal</a></li>
+							<li><a href="#connect">Connectez-vous</a></li>
+						</ul>
+						<!-- Champ de recherche alligner a droite -->
+						<form class="navbar-search pull-right" action="#Search">
+							<input type="text" class="search-query span2" placeholder="Rechercher">
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Premiere ligne de notre Grille-->
+			<div class="container theme-showcase" role="main">
+				<div class="row sho-grid">
+					<div class="span12">
+						<div class="span3">
+							<h3 class="comment-reply-title text-center" id="reply-title">Nouveau Message:</h3>
+							<div class="form-group">
+								<label for="author">Nom<span class="required"><abbr title="Required"> *</abbr></span></label> 
+								<input name="author" tabindex="1" class="name_autor form-control" id="author" aria-required="true" type="text"  placeholder="Votre nom" value="">
+								<div class="col-sm-6 col-lg-7"><p class="comment-form-comment"><label style="display: block;" for="comment">Commentaire</label>
+									<textarea name="comment" tabindex="4" class="text_val form-control" id="comment" aria-required="true" style="width: 95%;" placeholder="Votre commentaire..." rows="4"></textarea></p>
+									<div class="form-group text-center">
+										<button name="comm_submit" tabindex="5" class="text_inp btn-info form-control" id="comm_submit" type="submit" value="Poster le commentaire">Poster le commentaire <i class="icon-white icon-ok-sign"></i></button>
+									</div>
+								</div>
+							</div>
+							<h3 class="comment-reply-title text-center" id="reply-title">Supprimer une Conversation:</h3>				
+							<div class="form-group">
+								<label for="author">Entrer une Id:<span class="required"><abbr title="Required"> *</abbr></span></label> 
+								<input name="author" tabindex="1" class="name_val1 form-control" id="author" aria-required="true" type="text"  placeholder="ID a Supprimer" value="">
+								<div class=" form-group text-center">
+									<input name="comm_submit" tabindex="5" class="name_supp btn-danger form-control" id="comm_submit" type="submit" value="Supprimer id">	
+								</div>
+								</br>
+								</div>
+									&nbsp;Id: <span class="text_res"></span>
+									</br>
+									&nbsp;Message de Reception: <span class="name_res"></span>
+								</div>
+								<div class="span8">
+									<div class="span7">
+										<h1 class="comment-reply-title text-center" id="reply-title">Actualiter</h1>	
+									</div>
+									<div class="span2">
+										<table class="nav nav-stacked nav-pills" id="my-table" role="tabpanel">
+											<thead>
+												<tr>
+													<th>Les PLus Recents:</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<!-- Mon message rajouter par js -->
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="span5">
+										<div class="container-fluid">
+											<div class="span5">
+												<div class="panel panel-info chat-widget-main">
+													<div id="bodychat" class="panel-body">
+														<!--  Mon message rajouter par js-->
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--pied de page -->
+					<footer class="footer">
+					<p class="comment-reply-title text-center" id="reply-title">Page Realiser par Alexendre Lehmann et Yonathan Guez</p>
+						<!--lancement des script js de bootsrap en fin de page si long a charger-->
+						<script src="bootstrap/js/bootstrap.min.js"></script>
+						<script src="./docjs.js"></script>
+					</footer> 
+				</div>
+			</div>
+		</div>
+	</body>	
+ </html>
